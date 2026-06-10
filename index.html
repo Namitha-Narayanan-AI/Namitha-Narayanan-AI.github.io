@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namitha Narayanan — Biomedical AI Researcher</title>
+  <meta name="description" content="PhD applicant in radiomics and radiogenomics for precision oncology. MSc Artificial Intelligence, Heriot-Watt University." />
+  <meta name="keywords" content="Namitha Narayanan, PhD, Biomedical AI, Deep Learning, Cancer Modelling, Medical Imaging, Interpretable AI, Precision Medicine" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal-dark: #085041;
+      --teal-mid: #0F6E56;
+      --teal-light: #E1F5EE;
+      --purple-dark: #3C3489;
+      --purple-light: #EEEDFE;
+      --blue-dark: #0C447C;
+      --blue-light: #E6F1FB;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --border: #e5e5e3;
+      --bg: #fff;
+      --bg-secondary: #f8f7f5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-primary);
+      background: var(--bg);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 3rem;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-name { font-size: 14px; font-weight: 600; letter-spacing: 0.04em; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 13px; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 420px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-left {
+      padding: 4rem 3rem;
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .eyebrow {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      color: var(--teal-mid); text-transform: uppercase; margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: 40px; font-weight: 600; line-height: 1.12;
+      letter-spacing: -0.025em; margin-bottom: 1.25rem;
+    }
+    .hero-tagline {
+      font-size: 15px; color: var(--text-secondary); line-height: 1.7;
+      max-width: 400px; margin-bottom: 2rem;
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; }
+    .badge {
+      font-size: 11px; font-weight: 500; padding: 4px 11px;
+      border-radius: 20px; letter-spacing: 0.03em;
+    }
+    .badge-teal { background: var(--teal-light); color: var(--teal-dark); }
+    .badge-purple { background: var(--purple-light); color: var(--purple-dark); }
+    .badge-blue { background: var(--blue-light); color: var(--blue-dark); }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 500;
+      padding: 8px 18px; border-radius: 6px;
+      text-decoration: none; transition: all 0.15s; cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--teal-mid); color: #fff; border: 1px solid var(--teal-mid);
+    }
+    .btn-primary:hover { background: var(--teal-dark); border-color: var(--teal-dark); }
+    .btn-secondary {
+      background: transparent; color: var(--text-primary); border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: var(--bg-secondary); }
+
+    .hero-right {
+      padding: 3rem; background: var(--bg-secondary);
+      display: flex; flex-direction: column; justify-content: center; gap: 1px;
+    }
+    .hero-right-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; }
+    .stat-cell {
+      padding: 1.25rem 1rem; background: var(--bg);
+    }
+    .stat-label { font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+    .stat-value { font-size: 17px; font-weight: 600; }
+    .stat-sub { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+    /* ── SECTIONS ── */
+    section { padding: 3.5rem 3rem; border-bottom: 1px solid var(--border); }
+    .section-eyebrow {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+      color: var(--text-muted); text-transform: uppercase; margin-bottom: 2rem;
+    }
+    h2 { font-size: 22px; font-weight: 600; margin-bottom: 1rem; }
+
+    /* ── STATEMENT ── */
+    .statement-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal-mid);
+      border-radius: 0 8px 8px 0;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .statement-box p { font-size: 15px; line-height: 1.75; color: var(--text-primary); }
+
+    /* ── RESEARCH GRID ── */
+    .research-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    }
+    .research-card {
+      padding: 1.5rem; background: var(--bg);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .research-card:nth-child(2n) { border-right: none; }
+    .research-card:nth-last-child(-n+2) { border-bottom: none; }
+    .rtag {
+      display: inline-block; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.06em; padding: 3px 8px; border-radius: 4px;
+      margin-bottom: 0.75rem; text-transform: uppercase;
+    }
+    .rtag-diss { background: var(--purple-light); color: var(--purple-dark); }
+    .rtag-active { background: var(--teal-light); color: var(--teal-dark); }
+    .rtag-ind { background: var(--blue-light); color: var(--blue-dark); }
+    .research-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 0.5rem; line-height: 1.4; }
+    .research-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── GOOGLE SCHOLAR ── */
+    .scholar-card {
+      display: grid; grid-template-columns: auto 1fr auto;
+      align-items: center; gap: 1.5rem;
+      padding: 1.5rem 1.75rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg);
+      margin-bottom: 1.5rem;
+    }
+    .scholar-logo {
+      width: 44px; height: 44px; border-radius: 8px;
+      background: #4285F4; display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 700; color: white;
+      flex-shrink: 0;
+    }
+    .scholar-info h3 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+    .scholar-info p { font-size: 13px; color: var(--text-secondary); }
+    .scholar-card .btn { white-space: nowrap; }
+
+    .scholar-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+      margin-top: 1.5rem;
+    }
+    .scholar-step {
+      padding: 1.25rem 1rem; background: var(--bg-secondary);
+      border-right: 1px solid var(--border);
+    }
+    .scholar-step:last-child { border-right: none; }
+    .step-num {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--teal-mid); color: white;
+      font-size: 11px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+    .scholar-step h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .scholar-step p { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+
+    /* ── TIMELINE ── */
+    .timeline { display: flex; flex-direction: column; }
+    .timeline-item {
+      display: grid; grid-template-columns: 110px 1fr;
+      gap: 1.5rem; padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .t-date { font-size: 12px; color: var(--text-muted); line-height: 1.5; padding-top: 2px; }
+    .t-org { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+    .t-role { font-size: 13px; color: var(--teal-mid); font-weight: 500; margin-bottom: 6px; }
+    .t-detail { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── SKILLS ── */
+    .skills-block { margin-bottom: 1.5rem; }
+    .skills-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; font-weight: 500; }
+    .skills-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      font-size: 12px; padding: 5px 12px; border-radius: 20px;
+      border: 1px solid var(--border); color: var(--text-secondary);
+      background: var(--bg);
+    }
+
+    /* ── INTERESTS ── */
+    .interests-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    }
+    .interest-cell {
+      padding: 1.25rem; background: var(--bg);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .interest-cell:nth-child(3n) { border-right: none; }
+    .interest-cell:nth-last-child(-n+3) { border-bottom: none; }
+    .i-icon { font-size: 20px; margin-bottom: 8px; }
+    .interest-cell h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .interest-cell p { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    }
+    .contact-links { display: flex; flex-direction: column; gap: 10px; }
+    .contact-link {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; color: var(--text-secondary);
+      text-decoration: none; padding: 10px 14px;
+      border: 1px solid var(--border); border-radius: 8px;
+      background: var(--bg); transition: all 0.15s;
+    }
+    .contact-link:hover { background: var(--bg-secondary); color: var(--text-primary); }
+    .contact-link svg { flex-shrink: 0; }
+    .contact-note { font-size: 14px; color: var(--text-secondary); line-height: 1.75; padding: 1.5rem; background: var(--bg-secondary); border-radius: 10px; border: 1px solid var(--border); }
+    .contact-note strong { color: var(--text-primary); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 1.5rem 3rem; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    footer p { font-size: 12px; color: var(--text-muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 2.5rem 1.25rem; border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-right { padding: 2rem 1.25rem; }
+      h1 { font-size: 28px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+      section { padding: 2.5rem 1.25rem; }
+      .research-grid { grid-template-columns: 1fr; }
+      .research-card { border-right: none !important; }
+      .scholar-card { grid-template-columns: auto 1fr; }
+      .scholar-card .btn { display: none; }
+      .scholar-steps { grid-template-columns: 1fr 1fr; }
+      .scholar-step:nth-child(2n) { border-right: none; }
+      .scholar-step:nth-child(n+3) { border-top: 1px solid var(--border); }
+      .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
+      .t-date { font-size: 11px; }
+      .interests-grid { grid-template-columns: 1fr 1fr; }
+      .interest-cell:nth-child(3n) { border-right: 1px solid var(--border); }
+      .interest-cell:nth-child(2n) { border-right: none !important; }
+      .contact-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 6px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Namitha Narayanan</span>
+  <ul class="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#scholar">Google Scholar</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">PhD Applicant &middot; Oncology AI</div>
+    <h1>Radiomics &amp;<br>Radiogenomics<br>for Precision Oncology</h1>
+    <p class="hero-tagline">
+      MSc Artificial Intelligence graduate (Heriot-Watt, 3.6 GPA) with hands-on research
+      in medical image analysis and deep learning — working toward imaging-genomics integration for cancer biomarker discovery and treatment response prediction.
+    </p>
+    <div class="badges">
+      <span class="badge badge-teal">Radiomics</span>
+      <span class="badge badge-purple">Radiogenomics</span>
+      <span class="badge badge-blue">Imaging Biomarkers</span>
+      <span class="badge badge-teal">MONAI · PyTorch</span>
+      <span class="badge badge-purple">Precision Oncology</span>
+    </div>
+    <div class="hero-cta">
+      <a href="mailto:namin232@gmail.com" class="btn btn-primary">Get in touch</a>
+      <a href="https://github.com/Namitha-Narayanan" target="_blank" rel="noopener" class="btn btn-secondary">GitHub ↗</a>
+      <a href="https://linkedin.com/in/namitha-narayanan" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-label">At a glance</div>
+    <div class="stat-grid">
+      <div class="stat-cell">
+        <div class="stat-label">Degree</div>
+        <div class="stat-value">MSc AI</div>
+        <div class="stat-sub">Heriot-Watt &middot; 3.6 GPA</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Focus</div>
+        <div class="stat-value">Radiomics</div>
+        <div class="stat-sub">Radiogenomics · Oncology</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Core stack</div>
+        <div class="stat-value">PyTorch</div>
+        <div class="stat-sub">Python &middot; Java &middot; SQL</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Location</div>
+        <div class="stat-value">Kerala</div>
+        <div class="stat-sub">India &middot; Open to relocate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="section-eyebrow">Research</div>
+  <div class="statement-box">
+    <p>
+      I am seeking a PhD position in <strong>radiomics and radiogenomics</strong> — the quantitative analysis of medical images and their integration with genomic data to discover imaging biomarkers, predict treatment response, and personalise cancer care. My MSc dissertation on medical image concept detection gave me a foundation in radiology image pipelines and multi-label deep learning. I want to build on this toward imaging-genomics fusion models: extracting radiomic features from tumour images and linking them to gene expression, mutation profiles, or drug response data to find clinically actionable patterns in precision oncology.
+    </p>
+  </div>
+  <div class="research-grid">
+    <div class="research-card">
+      <span class="rtag rtag-diss">MSc Dissertation &middot; 2023</span>
+      <h3>Concept Detection in Medical Images</h3>
+      <p>Built a ResNet18 multi-label classifier on radiology images with UMLS/CUI concept labels (ImageCLEF/ROCO-style data). Showed that accuracy alone misleads clinical evaluation — grounding in this work motivates my interest in quantitative radiomic feature extraction and meaningful biomarker validation.</p>
+    </div>
+    <div class="research-card">
+      <span class="rtag rtag-active">Active &middot; 2026</span>
+      <h3>MONAI Medical Imaging Baseline</h3>
+      <p>Implemented a clean medical image classification pipeline (MONAI + PyTorch) on MedNIST — 0.9986 validation accuracy — with full evaluation including confusion matrix, precision, recall, and F1. Establishing foundational skills toward tumour image analysis and radiomic feature pipelines.</p>
+    </div>
+    <div class="research-card">
+      <span class="rtag rtag-active">Building &middot; 2026</span>
+      <h3>Oncology Imaging &amp; Radiomics Workspace</h3>
+      <p>Developing a reproducible research workspace for oncology imaging concept detection — DICOM preprocessing, PyRadiomics feature extraction, and structured experiment tracking — as a foundation for radiogenomics integration work.</p>
+    </div>
+    <div class="research-card">
+      <span class="rtag rtag-ind">Research Interest</span>
+      <h3>Imaging-Genomics Fusion for Cancer</h3>
+      <p>Investigating multi-modal fusion approaches that link radiomic imaging features with genomic data (gene expression, somatic mutations) to predict drug response, tumour subtype, and patient outcomes — the core of the radiogenomics PhD direction I am pursuing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE SCHOLAR -->
+<section id="scholar">
+  <div class="section-eyebrow">Academic Profile</div>
+  <div class="scholar-card">
+    <div class="scholar-logo">S</div>
+    <div class="scholar-info">
+      <h3>Google Scholar</h3>
+      <p>Set up your public academic profile — makes your dissertation discoverable and signals research seriousness to PhD supervisors.</p>
+    </div>
+    <a href="https://scholar.google.com/citations?view_op=new_profile" target="_blank" rel="noopener" class="btn btn-primary">Create profile ↗</a>
+  </div>
+  <div class="section-eyebrow" style="margin-top: 1.5rem;">How to set up your google scholar profile — 4 steps</div>
+  <div class="scholar-steps">
+    <div class="scholar-step">
+      <div class="step-num">1</div>
+      <h4>Sign in with Gmail</h4>
+      <p>Go to scholar.google.com and click "My Profile". Use your personal Gmail (namin232@gmail.com).</p>
+    </div>
+    <div class="scholar-step">
+      <div class="step-num">2</div>
+      <h4>Fill your profile</h4>
+      <p>Add your name, affiliation ("Independent Researcher / MSc AI, Heriot-Watt"), research interests: radiomics, radiogenomics, medical imaging, precision oncology, deep learning.</p>
+    </div>
+    <div class="scholar-step">
+      <div class="step-num">3</div>
+      <h4>Add your dissertation</h4>
+      <p>Search for your thesis title. If Scholar doesn't find it, use "Add article manually" — enter the title, year (2023), institution, and abstract.</p>
+    </div>
+    <div class="scholar-step">
+      <div class="step-num">4</div>
+      <h4>Make it public</h4>
+      <p>Set profile visibility to public. Add your portfolio URL (this site) and GitHub link. Your profile is now searchable by name.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-eyebrow">Experience</div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="t-date">Dec 2025 –<br>Present</div>
+      <div>
+        <div class="t-org">Invesdwin GmbH</div>
+        <div class="t-role">Research Engineer – Machine Learning</div>
+        <p class="t-detail">Computational research for algorithmic backtesting validation. Reproducibility-focused experimentation, Java/CSV workflows, and technical documentation under confidential project constraints. Remote / India.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-date">Sep – Oct 2023</div>
+      <div>
+        <div class="t-org">Heriot-Watt University / 123 Invest Group</div>
+        <div class="t-role">Research Intern – Machine Learning</div>
+        <p class="t-detail">University–industry ML research internship. Implemented optimisation algorithms (genetic, Bayesian, PSO, SMAC3, Dragonfly) with international collaboration, research documentation, and supervisor-led progress reviews. Edinburgh / Germany.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-date">Nov 2023 –<br>Apr 2024</div>
+      <div>
+        <div class="t-org">Heriot-Watt University</div>
+        <div class="t-role">Teaching Assistant – Java &amp; Machine Learning</div>
+        <p class="t-detail">Supported undergraduate Java programming labs and postgraduate ML sessions covering distributed systems and parallel computing. Mentored students through debugging, assignment queries, and model workflow concepts.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-date">Jun 2024 –<br>Nov 2025</div>
+      <div>
+        <div class="t-org">Diligenta, Phoenix Group</div>
+        <div class="t-role">Operations and Document Processing Analyst</div>
+        <p class="t-detail">Managed sensitive customer and financial documentation in a regulated environment. Handled pension, payment, and death-payment processes — strengthening careful documentation, quality control, and compliance-aware execution.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="t-date">Feb – Dec 2021</div>
+      <div>
+        <div class="t-org">UST Global</div>
+        <div class="t-role">Associate Software Developer</div>
+        <p class="t-detail">Java enterprise development and automation testing (Cucumber, Jira) for an e-commerce client. Supported data migration from MySQL to Redis via Cassandra in an Agile/Scrum team. Kerala, India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-eyebrow">Technical Skills</div>
+  <div class="skills-block">
+    <div class="skills-label">AI &amp; Deep Learning</div>
+    <div class="skills-pills">
+      <span class="pill">PyTorch</span>
+      <span class="pill">PyTorch Lightning</span>
+      <span class="pill">TorchVision</span>
+      <span class="pill">scikit-learn</span>
+      <span class="pill">CNNs &amp; ResNet18</span>
+      <span class="pill">Multi-label classification</span>
+      <span class="pill">Pandas</span>
+      <span class="pill">NumPy</span>
+      <span class="pill">Model evaluation</span>
+    </div>
+  </div>
+  <div class="skills-block">
+    <div class="skills-label">Biomedical &amp; Imaging AI</div>
+    <div class="skills-pills">
+      <span class="pill">Medical image analysis</span>
+      <span class="pill">DICOM preprocessing</span>
+      <span class="pill">MONAI workflows</span>
+      <span class="pill">Radiomic features</span>
+      <span class="pill">PyRadiomics</span>
+      <span class="pill">UMLS / CUI labels</span>
+      <span class="pill">Clinical AI evaluation</span>
+      <span class="pill">Multi-modal data fusion</span>
+    </div>
+  </div>
+  <div class="skills-block">
+    <div class="skills-label">Engineering &amp; Research</div>
+    <div class="skills-pills">
+      <span class="pill">Python</span>
+      <span class="pill">Java &amp; Spring Boot</span>
+      <span class="pill">Git / GitHub</span>
+      <span class="pill">SQL / MySQL</span>
+      <span class="pill">Cassandra / Redis</span>
+      <span class="pill">Jira / Confluence</span>
+      <span class="pill">REST APIs</span>
+      <span class="pill">Reproducible experimentation</span>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top: 2.5rem;">Research interests</div>
+  <div class="interests-grid">
+    <div class="interest-cell">
+      <div class="i-icon">🩻</div>
+      <h4>Radiomics</h4>
+      <p>Quantitative feature extraction from tumour images for biomarker discovery</p>
+    </div>
+    <div class="interest-cell">
+      <div class="i-icon">🧬</div>
+      <h4>Radiogenomics</h4>
+      <p>Linking imaging phenotypes to genomic data — mutations, gene expression, drug response</p>
+    </div>
+    <div class="interest-cell">
+      <div class="i-icon">🔬</div>
+      <h4>Precision oncology</h4>
+      <p>Patient-specific treatment response prediction from multi-modal cancer data</p>
+    </div>
+    <div class="interest-cell">
+      <div class="i-icon">🧠</div>
+      <h4>Deep learning for imaging</h4>
+      <p>CNNs, attention mechanisms, and multi-modal fusion for tumour characterisation</p>
+    </div>
+    <div class="interest-cell">
+      <div class="i-icon">💊</div>
+      <h4>Drug response prediction</h4>
+      <p>Imaging and genomic signatures for personalised therapy selection</p>
+    </div>
+    <div class="interest-cell">
+      <div class="i-icon">📊</div>
+      <h4>Clinical AI evaluation</h4>
+      <p>Rigorous, reproducible evaluation frameworks for biomedical AI systems</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow">Contact</div>
+  <div class="contact-grid">
+    <div class="contact-links">
+      <a href="mailto:namin232@gmail.com" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        namin232@gmail.com
+      </a>
+      <a href="https://linkedin.com/in/namitha-narayanan" target="_blank" rel="noopener" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn — Namitha Narayanan
+      </a>
+      <a href="https://github.com/Namitha-Narayanan" target="_blank" rel="noopener" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        GitHub — Namitha-Narayanan
+      </a>
+      <a href="tel:+917559867849" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.41 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 75598 67849 &middot; Kerala, India
+      </a>
+    </div>
+    <div class="contact-note">
+      <strong>Open to PhD opportunities</strong> in radiomics, radiogenomics, and precision oncology — worldwide.<br><br>
+      Particularly interested in research groups working on imaging biomarker discovery, imaging-genomics integration, tumour characterisation, and deep learning for cancer. Happy to discuss research directions, potential fit, or share my dissertation.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Namitha Narayanan &middot; Kerala, India</p>
+  <p>Built with HTML &middot; Hosted on GitHub Pages</p>
+</footer>
+
+</body>
+</html>
